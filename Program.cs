@@ -7,8 +7,8 @@
             Hero elf = new Hero(new ElfFactory());
             elf.Hit();
             elf.Run();
-    
-            Hero voin = new Hero(new VoinFactory());
+
+            Hero voin = new Hero(new WariorFactory());
             voin.Hit();
             voin.Run();
     
@@ -16,7 +16,7 @@
         }
     }
     //абстрактный класс - оружие
-    public interface Weapon
+   public interface Weapon
     {
         public void Hit();
     }
@@ -78,7 +78,7 @@
         }
     }
     // Фабрика создания бегущего героя с мечом
-    class VoinFactory : HeroFactory
+    class WariorFactory : HeroFactory
     {
         public override Movement CreateMovement()
         {
